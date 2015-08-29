@@ -21,7 +21,7 @@ import org.springframework.transaction.PlatformTransactionManager;
 import com.jolbox.bonecp.BoneCPDataSource;
 
 @Configuration
-@PropertySource("classpath*:/META-INF/spring/application.properties")
+@PropertySource("META-INF/spring/application.properties")
 @EnableJpaRepositories(basePackages="com.mdstech.scala.repository")
 public class SpringDataContextConfiguration {
 
@@ -39,7 +39,7 @@ public class SpringDataContextConfiguration {
 	}
 
 	@Bean
-	public LocalContainerEntityManagerFactoryBean entityManagerFactoryBean()
+	public LocalContainerEntityManagerFactoryBean entityManagerFactory()
 			throws ClassNotFoundException {
 		LocalContainerEntityManagerFactoryBean entityManagerFactoryBean = new LocalContainerEntityManagerFactoryBean();
 		entityManagerFactoryBean.setDataSource(dataSource());
