@@ -24,5 +24,6 @@
 	</dependencies>
 	<modules>
 		<module>loan_reporter_jpa</module>
+		<module>loan_reporter_play</module>
 	</modules>
 </project>
